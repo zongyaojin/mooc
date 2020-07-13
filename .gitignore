@@ -6,6 +6,8 @@
 !*.cpp
 !*.h
 !*.hpp
+!udemy-cpp-opp.jpg
+!README.md
 
 # ...even if they are in subdirectories
 !*/
