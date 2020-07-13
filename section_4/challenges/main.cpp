@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int main() {
+int main() 
+{
     cout << "Enter you favorite number between 1 and 100: ";
     int temp;
     cin >> temp;
