@@ -11,3 +11,5 @@
 
 # ...even if they are in subdirectories
 !*/
+
+section_source/
