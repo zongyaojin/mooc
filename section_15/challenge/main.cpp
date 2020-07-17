@@ -39,17 +39,18 @@ int main() {
 
 
     // Checking 
-//    vector<Checking_Account> che_accounts;
-//    che_accounts.push_back(Checking_Account {} );
-//    che_accounts.push_back(Checking_Account {"C-X"} );
-//    che_accounts.push_back(Checking_Account {"C-Y", 2000} );
-//    che_accounts.push_back(Checking_Account {"C-Z", 5000} );
-//
-//    display(che_accounts);
-//    deposit(che_accounts, 1000);
-//    withdraw(che_accounts, 2000);
-//    withdraw(che_accounts, 2000);
-//    cout << endl;
+    vector<Checking_Account> che_accounts;
+    che_accounts.push_back(Checking_Account {} );
+    che_accounts.push_back(Checking_Account {"C-X"} );
+    che_accounts.push_back(Checking_Account {"C-Y", 2000} );
+    che_accounts.push_back(Checking_Account {"C-Z", 5000} );
+
+    display(che_accounts);
+    deposit(che_accounts, 0);
+    deposit(che_accounts, 1000);
+    withdraw(che_accounts, 2000);
+    withdraw(che_accounts, 2000);
+    cout << endl;
     
     // Trust 
     vector<Trust_Account> tru_accounts;
@@ -59,6 +60,7 @@ int main() {
     tru_accounts.push_back(Trust_Account {"T-Z", 5000, 5.0} );
 
     display(tru_accounts);
+    deposit(tru_accounts, -1000);
     deposit(tru_accounts, 1000);
     deposit(tru_accounts, 10000);
     withdraw(tru_accounts, 10000);
@@ -66,11 +68,8 @@ int main() {
     withdraw(tru_accounts, 2000);
     withdraw(tru_accounts, 2000);
     withdraw(tru_accounts, 2000);
-    cout << endl;
-//
-
+    cout << endl << endl;
     
-    cout << endl;
     return 0;
 }
 

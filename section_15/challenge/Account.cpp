@@ -5,7 +5,7 @@ Account::Account(std::string name, double balance)
 }
 
 bool Account::deposit(double amount) {
-    if (amount < 0) 
+    if (amount <= 0) 
         return false;
     else {
         balance += amount;
