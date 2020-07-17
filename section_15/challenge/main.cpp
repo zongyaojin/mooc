@@ -67,7 +67,7 @@ int main() {
     withdraw(tru_accounts, 2000);
     withdraw(tru_accounts, 2000);
     cout << endl;
-
+//
 
     
     cout << endl;

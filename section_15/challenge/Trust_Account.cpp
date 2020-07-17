@@ -13,13 +13,13 @@ bool Trust_Account::withdraw(double amount) {
 }
 
 bool Trust_Account::deposit(double amount) {
-    amount += amount * (int_rate/100);
     if (amount >= 5000)
         amount += 50;
     return Savings_Account::deposit(amount);
 }
 
 std::ostream &operator<<(std::ostream &os, const Trust_Account &account) {
-    os << "[Trust_Account: " << account.name << ": " << account.balance << ", " << account.int_rate << "%" << ", withdrawn: " << account.num_withdrawn << "]";
+    os << "[Trust_Account: " << account.name << ": " << account.balance << ", " 
+        << account.int_rate << "%" << ", withdrawn: " << account.num_withdrawn << "]";
     return os;
 }
