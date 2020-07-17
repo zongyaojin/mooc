@@ -145,6 +145,6 @@ Mystring &operator++(Mystring &rhs) {
 
 Mystring operator++(Mystring &rhs, int) {
     Mystring temp{rhs};
-    operator++(temp);
+    operator++(temp); // equivalent to ++temp;
     return temp;
 }
