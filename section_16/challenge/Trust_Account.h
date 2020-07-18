@@ -23,6 +23,7 @@ public:
     // Deposits of $5000.00 or more will receive $50 bonus
     virtual bool deposit(double) override;
     virtual void print(std::ostream &os) const override;
+    virtual ~Trust_Account() = default;
 };
 
 Trust_Account::Trust_Account(std::string name, double balance, double int_rate)

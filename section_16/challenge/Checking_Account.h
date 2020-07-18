@@ -16,6 +16,7 @@ public:
     virtual bool withdraw(double) override;
     virtual bool deposit(double) override;
     virtual void print(std::ostream &os) const override;
+    virtual ~Checking_Account() = default;
 };
 
 Checking_Account::Checking_Account(std::string name, double balance)
@@ -36,4 +37,4 @@ void Checking_Account::print(std::ostream &os) const {
 }
 
 
-#endif
+#endif // _CHECKING_ACCOUNT_H_ 

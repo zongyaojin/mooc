@@ -35,4 +35,4 @@ void withdraw(std::vector<I_Account*> &accounts, double amount) {
 }
 
 
-#endif
+#endif // _ACCOUNT_UTIL_H_

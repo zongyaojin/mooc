@@ -16,6 +16,7 @@ public:
     virtual bool withdraw(double) override;
     virtual bool deposit(double) override;
     virtual void print(std::ostream &os) const override;
+    virtual ~Savings_Account() = default;
 };
 
 Savings_Account::Savings_Account(std::string name, double balance, double int_rate)

@@ -13,6 +13,7 @@ public:
     virtual bool deposit(double amount) = 0;
     virtual bool withdraw(double amount) = 0;
     virtual void print(std::ostream &os) const = 0;
+    virtual ~I_Account() = default;
 };
 
 I_Account::I_Account(std::string name, double balance) 
@@ -36,4 +37,4 @@ bool I_Account::withdraw(double amount) {
         return false;
 }
 
-#endif
+#endif // _I_ACCOUNT_H_
