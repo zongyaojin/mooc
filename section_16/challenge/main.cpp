@@ -23,6 +23,9 @@ int main() {
     display(sav_accounts);
     deposit(sav_accounts, 1000);
     withdraw(sav_accounts,2000);
+    // Delete all these memories allocated on the heap by the pointers to prevent memory leak
+    for (auto p:sav_accounts)
+        delete p;
     cout << endl;
    
     // Checking
@@ -36,6 +39,11 @@ int main() {
     display(check_accounts);
     deposit(check_accounts, 1000);
     withdraw(check_accounts, 2000);
+    // Delete all these memories allocated on the heap by the pointers to prevent memory leak
+    for (auto p:check_accounts)
+        delete p;
+    cout << endl;
+    
 
     // Trust
     cout << "\n--------------- Trust tests ---------------" << endl;
@@ -58,6 +66,11 @@ int main() {
     for (int i=1; i<=5; i++)
         withdraw(trust_accounts, 1000);
 
+    // Delete all these memories allocated on the heap by the pointers to prevent memory leak
+    for (auto p:trust_accounts)
+        delete p;
+    cout << endl;
+    
     cout << endl;
     
     return 0;
