@@ -26,6 +26,7 @@ bool Savings_Account::withdraw(double amount) {
     return I_Account::withdraw(amount);
 }
 
+// Amount will be added with interest rate
 bool Savings_Account::deposit(double amount) {
     amount += amount * (int_rate/100);
     return I_Account::deposit(amount);

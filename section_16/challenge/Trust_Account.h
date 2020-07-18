@@ -30,12 +30,14 @@ Trust_Account::Trust_Account(std::string name, double balance, double int_rate)
         
 }
 
+// Deposit additional $50 bonus when amount >= $5000, with the interest rate inherited from Savings_Account
 bool Trust_Account::deposit(double amount) {
     if (amount >= bonus_threshold)
         amount += bonus_amount;
     return Savings_Account::deposit(amount);
 }
-    
+
+// Only allowed 3 withdrawals, each can be up to a maximum of 20% of the account's value
 bool Trust_Account::withdraw(double amount) {
     if (num_withdrawals >= max_withdrawals || (amount > balance * max_withdraw_percent))
         return false;
