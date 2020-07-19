@@ -8,6 +8,7 @@
 !*.hpp
 !udemy-cpp-opp.jpg
 !README.md
+!.gitignore
 
 # ...even if they are in subdirectories
 !*/
