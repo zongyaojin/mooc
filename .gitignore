@@ -9,6 +9,7 @@
 !udemy-cpp-opp.jpg
 !README.md
 !.gitignore
+!.txt
 
 # ...even if they are in subdirectories
 !*/
