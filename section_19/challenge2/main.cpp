@@ -9,7 +9,7 @@ int main()
     ifstream in_file {"../responses.txt"};
     
     if (!in_file.is_open()) {
-        cout << "Cannot open file.\n" << endl;
+        cerr << "Cannot open file.\n" << endl;
         return 1;
     }
     
@@ -40,9 +40,8 @@ int main()
     cout << setw(20) << setfill('-') << "" << endl;
     cout << setfill(' ');
     cout << setw(10) << left << "Average" << setw(10) << right << total/count << endl;
-    
-    
     cout << endl;
     
+    in_file.close();
 	return 0;
 }
