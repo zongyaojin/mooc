@@ -22,8 +22,12 @@ int main()
     int line {1};
     string buff;
     
-    while (getline(in_file, buff))
-        out_file << setw(10) << left << line++ << buff << endl;            
+    while (getline(in_file, buff)) {
+        if (buff == "")
+            out_file << std::endl;
+        else
+            out_file << setw(10) << left << line++ << buff << endl;
+    }
     
     in_file.close();
     out_file.close();
