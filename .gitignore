@@ -9,7 +9,9 @@
 !udemy-cpp-opp.jpg
 !README.md
 !.gitignore
-!.txt
+!responses.txt
+!romeoandjuliet.txt
+!romeoandjuliet_out.txt
 
 # ...even if they are in subdirectories
 !*/
