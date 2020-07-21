@@ -10,12 +10,12 @@ int main()
     ofstream out_file {"../romeoandjuliet_out.txt"};
     
     if (!in_file) {
-        cerr << "File open error.\n" << endl;
+        cerr << "Error opening input file.\n" << endl;
         return 1;
     }
     
     if (!out_file) {
-        cerr << "File create error.\n" << endl;
+        cerr << "Error opening output file.\n" << endl;
         return 1;
     }
     
