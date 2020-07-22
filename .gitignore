@@ -12,6 +12,7 @@
 !responses.txt
 !romeoandjuliet.txt
 !romeoandjuliet_out.txt
+!words.txt
 
 # ...even if they are in subdirectories
 !*/
