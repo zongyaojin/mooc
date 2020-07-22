@@ -58,6 +58,12 @@ void part1() {
                     words.insert(std::make_pair(word, 1));
                 else
                     ++words[word];
+                
+                // Or one can simply use the following one-liner, since according to cplusplus.com:
+                // `` a call to the std::map::operator[] function is equivalent to: (*((this->insert(make_pair(k,mapped_type()))).first)).second ``
+                // Which means it does the check for you and decide whether to create an element based on default initial value or modify existing element.
+                
+                // ++words[words];
             }
         }
         
@@ -84,6 +90,12 @@ void part2() {
                     words.insert(std::make_pair(word, std::set<int>{line_num}));
                 else
                     words[word].insert(line_num);
+                
+                // Or you can simply use the following one-liner, since according to cplusplus.com:
+                // `` a call to the std::map::operator[] function is equivalent to: (*((this->insert(make_pair(k,mapped_type()))).first)).second ``
+                // Which means it does the check for you and decide whether to create an element based on default initial value or modify existing element.
+                 
+                // words[word].insert(line_num);
             }
             ++line_num;
         }
