@@ -17,11 +17,18 @@ int main()
         "A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!", "This is a palindrome", "palindrome" };
 
     std::cout << std::boolalpha;
+    
     std::cout << std::setw(8) << std::left << "Result" << "String" << std::endl;
     std::cout << "---------------" << std::endl;
-
     for(const auto& s : test_strings) {
         std::cout << std::setw(8) << std::left << is_palindrome(s)  << s << std::endl;
+    }
+    std::cout << std::endl;
+
+    std::cout << std::setw(8) << std::left << "Result" << "String" << std::endl;
+    std::cout << "---------------" << std::endl;    
+    for(const auto& s : test_strings) {
+        std::cout << std::setw(8) << std::left << is_palindrome_2(s)  << s << std::endl;
     }
     std::cout << std::endl;
     
@@ -52,13 +59,12 @@ bool is_palindrome(const std::string& s)
 // Using iterator to process the string and recursion to check palindrome
 bool is_palindrome_2(const std::string& s) 
 {
-    std::string ss{s};
-    auto it = std::remove_if(ss.begin(), ss.end(), 
-                    [](const auto &c) {
-                        return !std::isalpha(c);
-                    });
-    ss.erase(it, ss.end());
-    std::transform(ss.begin(), ss.end(), ss.begin(), tolower);   
+    std::string ss;
+    std::copy_if(s.begin(), s.end(), std::back_inserter(ss),
+        [](const auto &c) {
+           return std::isalpha(c); 
+        });
+    std::transform(ss.begin(), ss.end(), ss.begin(), tolower);  
  
     std::deque<char> dq(ss.begin(), ss.end());
     if (dq.size() == 1 || dq.size() == 0)

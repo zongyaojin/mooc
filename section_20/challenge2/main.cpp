@@ -51,7 +51,7 @@ int main() {
     
     std::list<Song>::const_iterator current_song = playlist.begin();
     display_playlist(playlist);
-    std::cout << "Playing: " << *current_song << std::endl;
+    play_current_song(current_song);
     
     char input {'d'};
     while (input != 'q') {
@@ -101,11 +101,11 @@ void display_menu() {
 }
 
 void display_ruler() {
-    std::cout << std::setw(60) << std::setfill('-') << "" << std::setfill(' ') << std::endl;
+    std::cout << std::setw(52) << std::setfill('-') << "" << std::setfill(' ') << std::endl;
 }
 
 void play_current_song(const std::list<Song>::const_iterator &current_song) {
-    std::cout << "Playing: " << *current_song << std::endl;
+    std::cout << "Playing:\n" << *current_song << std::endl;
 }
 
 
