@@ -91,9 +91,7 @@ void part2() {
                 else
                     words[word].insert(line_num);
                 
-                // Or you can simply use the following one-liner, since according to cplusplus.com:
-                // `` a call to the std::map::operator[] function is equivalent to: (*((this->insert(make_pair(k,mapped_type()))).first)).second ``
-                // Which means it does the check for you and decide whether to create an element based on default initial value or modify existing element.
+                // Same as in part1(), you can simply use the following powerful one-liner.
                  
                 // words[word].insert(line_num);
             }
