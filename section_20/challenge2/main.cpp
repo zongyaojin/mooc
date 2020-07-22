@@ -56,6 +56,11 @@ int main() {
     char input {'d'};
     while (input != 'q') {
         display_menu();
+        
+        // Clear std::cin and ignore everything in the buffer
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+        
         std::cin >> input;
         input = std::tolower(input);
         switch (input) {
